@@ -133,7 +133,17 @@
             android:gravity="center"
             android:text="Compute GPA"
             android:textColor="#ffffff"
+            android:onClick="CalculateGPA"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/results"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:gravity="center"
+            android:text="Results"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:ignore="HardcodedText" />
 
 
     </LinearLayout>
