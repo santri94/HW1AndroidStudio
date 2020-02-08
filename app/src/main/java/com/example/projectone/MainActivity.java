@@ -13,8 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void click_me(View v){
-        TextView tv = findViewById(R.id.msg);
-        tv.setText("Clicked!!");
+
+    public void onClick(View view) {
+        //count++;//increment the count
+        TextView text=(TextView) findViewById(R.id.msg);// resorce location
+        text.setText("Hello Santi");// view in the text
     }
 }
