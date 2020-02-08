@@ -13,8 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void click_me(View v){
-        TextView tv = findViewById(R.id.msg);
-        tv.setText("Clicked!!");
+    public void CalculateGPA(){
+
+
     }
+
+
 }
