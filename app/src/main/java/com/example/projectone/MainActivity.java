@@ -1,9 +1,12 @@
 package com.example.projectone;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,10 +39,22 @@ public class MainActivity extends AppCompatActivity {
             double c4 = Double.parseDouble(class4.getText().toString());
             double c5 = Double.parseDouble(class5.getText().toString());
 
+            LinearLayout x = (LinearLayout) findViewById(R.id.background);
+
 
             //Double GPA = ((c1 + c2 + c3 + c4 + c5) / 5.0);
             double GPA = 0;
             GPA = (c1 + c2 + c3 + c4 + c5)/5;
+
+            if (GPA < 60.0){
+                x.setBackgroundColor(Color.parseColor("#ff0000"));
+            }
+            else if(GPA >= 61.0 && GPA <= 79.0){
+                x.setBackgroundColor(Color.parseColor("#ffff00"));
+            }
+            else {
+                x.setBackgroundColor(Color.parseColor("#00ff00"));
+            }
 
 
             text.setText("GPA is " + GPA);// view in the text
