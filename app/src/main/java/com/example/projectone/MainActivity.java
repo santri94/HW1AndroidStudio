@@ -30,15 +30,27 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please Enter All Your Grades", Toast.LENGTH_SHORT).show();
         }
         else {
-            Double c1 = Double.valueOf(class1.getText().toString());
-            Double c2 = Double.valueOf(class1.getText().toString());
-            Double c3 = Double.valueOf(class1.getText().toString());
-            Double c4 = Double.valueOf(class1.getText().toString());
-            Double c5 = Double.valueOf(class1.getText().toString());
+            double c1 = Double.parseDouble(class1.getText().toString());
+            double c2 = Double.parseDouble(class2.getText().toString());
+            double c3 = Double.parseDouble(class3.getText().toString());
+            double c4 = Double.parseDouble(class4.getText().toString());
+            double c5 = Double.parseDouble(class5.getText().toString());
 
-            Double GPA = ((c1 + c2 + c3 + c4 + c5) / 5.0);
+
+            //Double GPA = ((c1 + c2 + c3 + c4 + c5) / 5.0);
+            double GPA = 0;
+            GPA = (c1 + c2 + c3 + c4 + c5)/5;
+
 
             text.setText("GPA is " + GPA);// view in the text
+            //Clear all the fields
+            class1.setText("");
+            class2.setText("");
+            class3.setText("");
+            class4.setText("");
+            class5.setText("");
+
+
         }
 
 
